@@ -1,20 +1,383 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.softdesign.devintensive.ui.activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        app:layout_constraintRight_toRightOf="@+id/activity_main"
-        app:layout_constraintTop_toTopOf="@+id/activity_main"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:background="@color/grey"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/grey"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:textStyle="normal"/>
+                    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/grey"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Рейтинг"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="normal"/>
+                    </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="27dp"
+            android:background="@color/grey_light"></View>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/grey"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:textStyle="normal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/grey"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Написано строк кода"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="normal"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="27dp"
+            android:background="@color/grey_light"></View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="56dp"
+                 android:background="@color/grey"
+                 >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentBottom="true"
+                     android:layout_centerHorizontal="true"
+                     android:text="5"
+                     android:textColor="@color/white"
+                     android:textSize="22dp"
+                     android:textStyle="normal"/>
+             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/grey"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Проектов"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="normal"/>
+                    </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        >
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/spacing_medium_32"
+            android:layout_marginRight="@dimen/spacing_normal_16"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    style="@style/edit_text"
+                    android:hint="Мобильный телефон"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+7 (777) 777 - 77 - 77"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_size_2"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_large_72"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        >
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_markunread_black_24dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/spacing_medium_32"
+            android:layout_marginRight="@dimen/spacing_normal_16"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    style="@style/edit_text"
+                    android:hint="E-mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="as@sa.as"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_send_black_24dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_size_2"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_large_72"/><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/spacing_small_8"
+    android:layout_marginBottom="@dimen/spacing_small_8"
+    >
+
+    <ImageView
+        style="@style/icon.left"
+        android:src="@drawable/ic_vk_social_logotype_24dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="@dimen/spacing_medium_32"
+        android:layout_marginRight="@dimen/spacing_normal_16"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                style="@style/edit_text"
+                android:hint="Профиль в VK"
+                android:text="vk.com/123456"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/icon.right"
+        android:src="@drawable/ic_visibility_black_24dp"
+        />
+</LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_size_2"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_large_72"/><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/spacing_small_8"
+    android:layout_marginBottom="@dimen/spacing_small_8"
+    >
+
+    <ImageView
+        style="@style/icon.left"
+        android:src="@drawable/ic_github_logo"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="@dimen/spacing_medium_32"
+        android:layout_marginRight="@dimen/spacing_normal_16"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                style="@style/edit_text"
+                android:hint="Репозиторий"
+                android:text="github.com/adsdas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/icon.right"
+        android:src="@drawable/ic_visibility_black_24dp"
+        />
+</LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_size_2"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_large_72"/><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/spacing_small_8"
+    android:layout_marginBottom="@dimen/spacing_small_8"
+    >
+
+    <ImageView
+        style="@style/icon.left"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="@dimen/spacing_medium_32"
+        android:layout_marginRight="@dimen/spacing_normal_16"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="О себе"
+                android:text="dlkjsldkjlkjlksdjlkjclkdsjlklkkjhkjhkjhkjhvkdjhfkdfjhvkjdfhvkjhdfkvjhdkfjhvkdfjhvkdfjhvkdfjhvkdfjhjkfhkvjdfhkvjhdfkvhdkfjhvkdfjhsdjkcljksdclkjsdlcjklk"
+                android:inputType="textMultiLine"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_size_2"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_large_72"/>
+</LinearLayout>
